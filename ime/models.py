@@ -56,7 +56,7 @@ class Project(YAMLSerializable, IAccessControl, IMetadata):
     yaml_tag = "!Project"
     yaml_loader = yaml.SafeLoader
     # yaml_dumper = yaml.SafeDumper
-    project_name: str = ""
+    name: str = ""
     project_id: str = ""
     alternate_ids: List[str] = field(default_factory=list)
     description: str = ""
@@ -72,7 +72,7 @@ class Experiment(YAMLSerializable, IAccessControl, IMetadata):
     yaml_tag = "!Experiment"
     yaml_loader = yaml.SafeLoader
     # yaml_dumper = yaml.SafeDumper
-    experiment_name: str = ""
+    title: str = ""
     project_id: str = ""
     experiment_id: str = ""
     alternate_ids: List[str] = field(default_factory=list)
